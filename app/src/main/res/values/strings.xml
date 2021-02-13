@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Launch Report</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="date_wrap">Date: %s</string>
+    <string name="description_wrap">Details: \n%s</string>
+
+    <string name="success">Success</string>
+    <string name="failed">Failed</string>
+    <string name="ok">Ok</string>
+    <string name="offline_message">You are offline, please come online too perform this action</string>
+</resources>
