@@ -46,7 +46,7 @@ class LaunchEventRecyclerAdapter: RecyclerView.Adapter<LaunchEventRecyclerAdapte
         notifyDataSetChanged()
     }
 
-    fun setOrderClickListner(lis:eventListner){
+    fun clickListner(lis:eventListner){
         this.listner=lis
     }
 
@@ -67,6 +67,11 @@ class LaunchEventRecyclerAdapter: RecyclerView.Adapter<LaunchEventRecyclerAdapte
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val event= displayData.get(position)
         holder.bind(event)
+        if(listner!=null){
+            holder.binding.itemCard.setOnClickListener {
+                listner!!.onItemClick(event)
+            }
+        }
     }
 
 

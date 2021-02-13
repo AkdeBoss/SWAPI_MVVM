@@ -7,5 +7,5 @@ class LaunchEventsApiDataSource @Inject constructor(
 ): BaseDataSource() {
 
     suspend fun getLaunchEvents() = getResult { apiService.getAllLaunches() }
-    suspend fun getSingleLaunchEvent(id: Int) = getResult { apiService.getSingleLaunch(id) }
+    suspend fun getSingleLaunchEvent(id: String) = getResult { apiService.getSingleLaunch(id) }
 }

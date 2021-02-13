@@ -11,7 +11,7 @@ interface LaunchEventDao {
     fun getAllEvents() : LiveData<List<LaunchEvent>>
 
     @Query("SELECT * FROM launchevents WHERE id = :id")
-    fun getEvent(id: Int): LiveData<LaunchEvent>
+    fun getEvent(id: String):LiveData<LaunchEvent>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(events: List<LaunchEvent>)

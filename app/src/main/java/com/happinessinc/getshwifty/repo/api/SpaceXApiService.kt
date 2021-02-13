@@ -10,6 +10,6 @@ interface SpaceXApiService {
     @GET("v4/launches")
     suspend fun getAllLaunches() : Response<SpaceXrespone>
 
-    @GET("v4/launches{id}")
-    suspend fun getSingleLaunch(@Path("id") id: Int): Response<LaunchEvent>
+    @GET("v4/launches/{id}")
+    suspend fun getSingleLaunch(@Path("id") id: String): Response<LaunchEvent>
 }

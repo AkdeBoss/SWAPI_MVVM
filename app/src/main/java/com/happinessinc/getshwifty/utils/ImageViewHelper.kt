@@ -20,6 +20,14 @@ fun loadRectImage(imageView: AppCompatImageView, url: String?) {
         .placeholder(R.drawable.ic_place_holder)
         .into(imageView)
 }
+
+@BindingAdapter("load_large")
+fun loadLarge(imageView: AppCompatImageView, url: String?) {
+    Glide.with(imageView.getContext())
+        .load(url)
+        .placeholder(R.drawable.ic_place_holder)
+        .into(imageView)
+}
 @BindingAdapter("circle_image_Url")
 fun loadCircleImage(imageView: AppCompatImageView, url: String?) {
     Glide.with(imageView.getContext())
